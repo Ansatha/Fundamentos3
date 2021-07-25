@@ -50,6 +50,15 @@ var MobileLibrary = /** @class */ (function () {
         return totalPrice;
     };
     ;
+    MobileLibrary.prototype.printLibrary = function () {
+        console.log('Those are all my (' + this.mobiles.length + ') mobiles:');
+        for (var mobile in this.mobiles) {
+            this.mobiles[mobile].printFeatures();
+        }
+        ;
+        console.log('\nPrice overall: ' + this.totalPrice);
+    };
+    ;
     return MobileLibrary;
 }());
 exports.MobileLibrary = MobileLibrary;

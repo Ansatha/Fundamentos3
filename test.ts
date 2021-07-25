@@ -1,4 +1,4 @@
-import { Mobile } from "../Fundamentos2/mobileClass";
+import { Mobile } from "./mobile";
 import { MobileLibrary } from "./mobileLibrary";
 
 let myPhone0: Mobile = new Mobile ('Nokia', '3210', 'Nokia', 0.016, 'grey', false, 0, 50);
@@ -26,3 +26,6 @@ console.log('- Nombre:', myMobileLibrary.getName());
 console.log('- Listado de móviles:', myMobileLibrary.getMobiles().length + ":", myMobileLibrary.getMobiles());
 console.log('- Localización:', myMobileLibrary.getLocation());
 console.log('- Precio de todos los dispositivos:', myMobileLibrary.getTotalPrice());
+
+console.log('\n\x1b[36m%s\x1b[0m','c.Método printLibrary:');
+myMobileLibrary.printLibrary();

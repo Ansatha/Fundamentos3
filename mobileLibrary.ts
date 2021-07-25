@@ -1,4 +1,4 @@
-import { Mobile } from "../Fundamentos2/mobileClass";
+import { Mobile } from "./mobile"
 
 export class MobileLibrary
 {
@@ -53,7 +53,7 @@ export class MobileLibrary
         this.totalPrice = totalPrice;
     };
 
-    public totalPriceCalculation(): number
+    private totalPriceCalculation(): number
     {
         let totalPrice: number = 0;
         for (let mobile in this.mobiles)
@@ -61,5 +61,15 @@ export class MobileLibrary
             totalPrice += this.mobiles[mobile].getPrice();
         };
         return totalPrice;
+    };
+
+    public printLibrary(): void
+    {
+        console.log('Those are all my (' + this.mobiles.length + ') mobiles:');
+        for(let mobile in this.mobiles)
+        {
+            this.mobiles[mobile].printFeatures();
+        };
+        console.log('\nPrice overall: ' + this.totalPrice);
     };
 };
